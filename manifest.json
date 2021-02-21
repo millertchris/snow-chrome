@@ -1,0 +1,23 @@
+{
+    "manifest_version": 2,
+    "name": "Snow Chrome",
+    "description": "A fun snow effect for your browser * * *",
+    "version": "1.0",
+    "author": "Chris Miller",
+    "permissions": ["activeTab"],
+    "background": {
+        "scripts": ["background.js"]
+    },
+    "content_scripts": [
+        {
+        "matches": [
+            "<all_urls>"
+        ],
+        "css": [ "snow.css" ],
+        "js": ["content.js"]
+        }
+    ],
+    "browser_action": {
+        "default_icon": "icon.png"
+    }
+}
